@@ -1,13 +1,13 @@
 import React from "react";
 import {
   View,
-  Text,
   StyleSheet,
   TouchableOpacity,
   TouchableNativeFeedback,
   Platform,
   ImageBackground,
 } from "react-native";
+import DefaultText from '../components/DefaultText';
 
 const MealItem = (props) => {
   let TouchableComponent = TouchableOpacity;
@@ -22,14 +22,14 @@ const MealItem = (props) => {
         <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
           <ImageBackground source={{ uri: props.image }} style={styles.bgImage}>
               <View style={styles.titleContainer}>
-                <Text style={styles.title} numberOfLines={1}>{props.title}</Text>
+                <DefaultText style={styles.title} numberOfLines={1}>{props.title}</DefaultText>
               </View>
           </ImageBackground>
         </View>
         <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
-          <Text>{props.duration}m</Text>
-          <Text>{props.complexity.toUpperCase()}</Text>
-          <Text>{props.affordability}</Text>
+          <DefaultText>{props.duration}m</DefaultText>
+          <DefaultText>{props.complexity.toUpperCase()}</DefaultText>
+          <DefaultText>{props.affordability}</DefaultText>
         </View>
       </View>
     </TouchableComponent>
