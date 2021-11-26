@@ -36,7 +36,6 @@ export default function App() {
     return (
       <AppLoading
         startAsync={fetchFonts}
-        r
         onFinish={() => setFontLoaded(true)}
         onError={(err) => console.log(err)}
       />
